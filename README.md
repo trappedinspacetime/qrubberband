@@ -36,4 +36,4 @@ I use it to translate text with **tesseract-ocr**. Here is my oneliner `bash` co
 
      text=$(maim -g $(qrubberband)  | tesseract  stdin stdout -l eng | head -c -1 )  ; notify-send --icon=info "$text" "$(wget -U "Mozilla/5.0" -qO - "http://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=tr&dt=t&q=$(echo $text | sed "s/[\"'<>]//g")" | sed "s/,,,0]],,.*//g" | awk -F'"' '{print $2, $6}')" ; echo "$text" ;
     
-It translates English text to Turkish, you can replace `tr` with your native language short code.
+It translates English text into Turkish, you can replace `tr` with your native language short code.
