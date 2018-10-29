@@ -23,11 +23,7 @@ if it's OK:
 run it like 
 
      ./qrubberband
-<<<<<<< HEAD
-and drag the screen area, it will print the result in the following format `wxh+x+y`, **x** and **y** are the starting coordinates.
-=======
 and drag the screen area, it will print the result in the following format`wxh+x+y`, **x** and **y** are the starting coordinates.
->>>>>>> 55787e91f5065d8af6ec11cb6cdc6b255d333ac5
 
 You can copy it to `/usr/local/bin/` via:
 
@@ -40,4 +36,4 @@ I use it to translate text with **tesseract-ocr**. Here is my oneliner `bash` co
 
      text=$(maim -g $(qrubberband)  | tesseract  stdin stdout -l eng | head -c -1 )  ; notify-send --icon=info "$text" "$(wget -U "Mozilla/5.0" -qO - "http://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=tr&dt=t&q=$(echo $text | sed "s/[\"'<>]//g")" | sed "s/,,,0]],,.*//g" | awk -F'"' '{print $2, $6}')" ; echo "$text" ;
     
-It translates English text into Turkish, you can replace `tr` with your native language short code.
+It translates English text into Turkish via `google translate` online tool, you can replace `tr` with your native language short code.
