@@ -1,7 +1,7 @@
 # qrubberband
 For those who use `X server` and `compiz window manager`  there is a glitch that prevents proper drawing of rectangle ( rubberbanding ) on the screen while dragging the mouse ( moving mouse with left button pressed).
 
-I conconcted it from the info I found on the net and QT documentation. It works with **miam** screenshot tool. 
+I conconcted it from the info I found on the net and QT documentation. It works with **maim** https://github.com/naelstrof/maimscreenshot tool. 
 It's based on QT4.
 
 To build it on Ubuntu you need to have QT4 installed. 
@@ -28,7 +28,7 @@ and drag the screen area, it will print the result in the following format`wxh+x
 You can copy it to `/usr/local/bin/` via:
 
      sudo cp qrubberband /usr/local/bin/
-And you can run it with **miam** like:
+And you can run it with **maim** like:
 
      maim  -g $(qrubberband) test.png
 
